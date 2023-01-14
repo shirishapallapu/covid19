@@ -11,7 +11,7 @@ module.exports = app;
 
 const initializeDbAndServer = async () => {
   try {
-    db = await open({ filename: dbPath, driver: sqlite3 });
+    db = await open({ filename: dbPath, driver: sqlite3.Database });
   } catch (e) {
     console.log(`DB Error: ${e.message}`);
     process.exit(1);
